@@ -4,9 +4,7 @@ from langchain.tools import tool
 from typing import List
 from dotenv import load_dotenv
 
-
-class WeatherInfoTool(StructuredTool):
-    
+class WeatherInfoTool:
     def __init__(self):
         load_dotenv()
         self.api_key = os.environ.get("OPENWEATHERMAP_API_KEY")
